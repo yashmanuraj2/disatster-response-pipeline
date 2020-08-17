@@ -1,4 +1,4 @@
-UDACITY DISASTER RESPoNSE PIPELINES : 
+                                                          UDACITY DISASTER RESPoNSE PIPELINES : 
 
 The Project contains two datasets , categories and messages , The project classifies messages on the basis of keywords and assigns them to the respective category.
 THe first part of the project contains Cleaning of data using NLP pipelines. ETLpreparation
