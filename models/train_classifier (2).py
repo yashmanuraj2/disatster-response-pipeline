@@ -34,9 +34,9 @@ warnings.simplefilter('ignore')
         The data is split into train- test values.'''
     
 def load_data(database_filepath):
-    #database_filepath = '../data/DisasterResponse.db'
-    #name = 'sqlite:///' + database_filepath
-    engine = create_engine('sqlite:///' + database_filepath)
+    database_filepath = '../data/DisasterResponse.db'
+    name = 'sqlite:///' + database_filepath
+    engine = create_engine(name)
     df = pd.read_sql_table('DisasterResponse', con=engine)
     df = df[df.related!=2]
     X =  df.message.values
