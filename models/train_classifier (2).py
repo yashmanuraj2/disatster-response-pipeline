@@ -42,6 +42,7 @@ def load_data(database_filepath):
     engine = create_engine(name)
     df = pd.read_sql_table('DisasterResponse', con=engine)
     df = df[df.related!=2]
+    
     X =  df.message.values
     Y =  df.iloc[:,5:]
     category_names = list(np.array(Y.columns))
@@ -87,9 +88,9 @@ def build_model(X_train, Y_train):
     return cv
 ''' Prints the values of preicision recall accuracy and f1 score on the test data ''' 
 
-def evaluate_model(model, X_test, Y_test, category_names):
+def evaluate_model(pipe, X_test, Y_test, category_names):
     
-    y_predtest = model.predict(X_test)
+    y_predtest = pipe.predict(X_test)
    # y_predtrain = model.predict(X_train)
 
     eval_ypred_test = eval_metrics(np.array(Y_test), y_predtest, category_names)
