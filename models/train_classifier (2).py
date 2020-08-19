@@ -1,4 +1,7 @@
-
+'''
+RUN THE FILE USING THis FOLLOWING COMMAND IN 
+models folder : python train_classifier.py ../data/DisasterResponse.db classifier.pkl '''
+   
 import pandas as pd
 import sys
 import os
